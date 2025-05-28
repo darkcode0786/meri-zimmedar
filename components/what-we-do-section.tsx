@@ -5,9 +5,10 @@ import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { Shield, Users, Eye, CheckCircle, ArrowRight, Lock, Heart, FileText, FileCheck, AlertCircle } from "lucide-react"
 import Image from "next/image"
-import { Button } from "./ui/button"
+
 import { Card, CardContent } from "./ui/card"
 import Link from "next/link"
+import { useGSAP } from "@gsap/react"
 
 if (typeof window !== "undefined") {
     gsap.registerPlugin(ScrollTrigger)
@@ -73,6 +74,27 @@ export default function WhatWeDoSection() {
         return () => ctx.revert()
     }, [])
 
+
+    // useGSAP(() => {
+    //     let tl1 = gsap.timeline({
+    //         scrollTrigger: {
+    //             trigger: sectionRef.current,
+    //             scroller: "body",
+    //             start: "top 50%",
+    //             markers: true,
+    //             scrub: 2,
+
+    //         }
+    //     })
+
+
+    //     tl1.from(titleRef.current,{
+    //         y:150,
+    //         duration:1,
+    //        ease: "power4.out",
+    //     })
+    // }, [])
+
     return (
         <section id="what-we-do"
             ref={sectionRef}
@@ -85,7 +107,7 @@ export default function WhatWeDoSection() {
                     What We Do
                 </h2>
             </div>
-            <div className="w-24 h-1 bg-gradient-to-r my-6 from-blue-600 to-indigo-600 mx-auto rounded-full"></div>
+            <div className="w-24 h-1 bg-gradient-to-r mt-6 from-blue-600 to-indigo-600 mx-auto rounded-full"></div>
 
             {/* Problem Statement */}
 
@@ -113,7 +135,7 @@ export default function WhatWeDoSection() {
 
 
 
-                                
+
                             </div>
                         </div>
                     </div>
@@ -162,36 +184,7 @@ export default function WhatWeDoSection() {
                     </div>
                 </div>
             </div>
-            {/* <div className="w-full grid   md:grid-cols-2 space-x-2 container items-center justify-center " >
-                <div className="w-full overflow-hidden pt-10 pb-20 flex justify-end pr-10">
-                    <Image src="/img/how-we-do.png" width={400} height={400} className="" alt="about-image" />
-                </div>
-                <div ref={problemRef} className=" container   mx-auto w-full ">
-                    <div className="  text-left w-full pt-10 pr-">
-                        <h3 className="text-xl md:text-2xl font-semibold text-gray-900 mb-6">
-                            Securing Your Legacy for Those Who Matter Most
-                        </h3>
-                        <p className=" text-gray-900 mb-8 ">
-                            Over a lifetime, individuals accumulate various financial assets like mutual funds, insurance policies,
-                            bank accounts, fixed deposits, pension funds, real estate, and more.
-                        </p>
-                        <div className="rounded-full">
-                            <div className="flex flex-row items-center space-x-3 mb-4   ">
-                                <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center">
-                                    <FileText className="w-8 h-8 text-red-600" />
-                                </div>
-                                <h4 className="text-2xl font-semibold text-red-700 "> The Problem</h4>
-                            </div>
-                            <p className=" text-gray-900">
-                                Many of these assets go unclaimed because nominees are often unaware of their existence or don't have
-                                enough information when it's really required.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-
-            </div> */}
+           
 
             {/* Solution */}
             <div ref={solutionRef} className="mb-20 py-20 w-screen mx-auto  bg-gray-100">

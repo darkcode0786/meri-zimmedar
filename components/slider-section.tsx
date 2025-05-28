@@ -60,14 +60,13 @@ const SliderComponent = () => {
         gsap.to(wrapper, {
             x: () => -horizontalScrollLength,
             ease: 'none',
-
             scrollTrigger: {
                 trigger: container,
-
                 start: 'top 0%',
                 end: () => `+=${horizontalScrollLength}`,
                 pin: true,
-                scrub: 1,
+                pinSpacing: true,
+                scrub: 2,
                 // markers: true,
             },
         })
@@ -94,7 +93,7 @@ const SliderComponent = () => {
             });
 
 
-          
+
 
             gsap.from(cardsHead.lines, {
                 duration: 1,
@@ -119,18 +118,25 @@ const SliderComponent = () => {
         <>
 
 
-            <section ref={scrollSectionRef} className="relative w-full bg-gray-100">
-                <div ref={containerRef} className="absolute top-0 left-0 h-screen w-full overflow-hidden bg-gray-100 z-10">
-                    <div ref={wrapperRef} className="flex min-w-[200%] h-full">
+            <section ref={scrollSectionRef} className="relative w-full h-[340px] bg-gray-100 ">
+
+                <div ref={containerRef} className="absolute top-24 left-0 h-480px w-full overflow-hidden bg-gray-100 z-10">
+                    <div className='flex flex-col w-screen'>
+                        <div className="overflow-hidden "><h2 id="heading-how" className=' text-3xl md:text-4xl text-center font-bold mb-4 capitalize '>HOW WE DO</h2>
+                        </div>
+                        <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-indigo-600 mx-auto rounded-full"></div>
+                    </div>
+                    <div ref={wrapperRef} className="flex min-w-[140%] h-full">
+
                         {data.map((item, index) => (
-                            <div key={index} className="w-1/4 p-4 flex items-center justify-center">
-                                <div id={`parent-${index}`} className={`${item["bg-color"]} h-96 w-full rounded-xl flex items-center justify-center text-xl font-bold relative`}>
-                                    <div className="w-full h-full p-8">
-                                        <h3 id={`cardsHead-${index}`} className="overflow-hidden  text-5xl mb-6 text-white">
+                            <div key={index} className="w-1/4 p-4 flex items-center pb-10 pt-5 justify-center">
+                                <div id={`parent-${index}`} className={`${item["bg-color"]} h-67 w-full rounded-xl flex items-center justify-center   relative`}>
+                                    <div className="w-full  p-6 ">
+                                        <h3 id={`cardsHead-${index}`} className="overflow-hidden  text-3xl mb-6 text-white">
                                             {item.title}
                                         </h3>
-                                        <p className="text-2xl text-gray-100/60 pr-14">{item.para}</p>
-                                        <div className="w-[18vw] absolute top-[15rem] left-[30rem] z-10">
+                                        <p className="text-sm text-white pr-25">{item.para}</p>
+                                        <div className="w-[10vw] absolute top-[8rem] left-[19rem] z-10">
                                             <Image id={`png-upload-${index}`} src={`/img/${item["image-png"]}`} className='w-full' width={250} height={250} alt="upload png" />
                                         </div>
                                     </div>

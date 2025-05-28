@@ -19,6 +19,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger"
 import WhatWeDoSection from "@/components/what-we-do-section"
 import Image from "next/image"
 import { TextPlugin } from "gsap/TextPlugin";
+import TypewriterEffect from "@/components/typewriter-effect"
  
 
 
@@ -55,7 +56,6 @@ export default function HomePage() {
 
       }
     })
-
 
 
     gsap.from(`#hero-png`, {
@@ -119,11 +119,16 @@ export default function HomePage() {
             <div className="flex justify-between w-full items-center ">
               <div className="flex flex-col space-y-6 w-full" >
                 <div className="space-y-4 relative w-full">
-                  <h1 className="overflow-hidden text-main text-4xl font-bold text-white  sm:text-5xl md:text-5xl">
-                    Are you sure your? <br />
-                  
-                    <div id="typewriter"><span className="text-blue-500 underline underline-offset-4">Nominee</span> can claim all</div>
-                    <br /> your assets. when the time comes?
+                  {/* <h1 className="text-6xl font-bold text-white">Meri Zimmedari</h1> */}
+              
+                  <h1 className="overflow-hidden  text-main text-4xl font-bold text-white  sm:text-5xl md:text-4xl">
+                    Are you sure your? <br/>
+                      <TypewriterEffect
+                text="Nominee can claim "
+                speed={80}
+                delayBeforeReverse={1000}
+              />
+                  <br/> all your assets. when the time comes?
                   </h1>
                   <Image id="hero-png" src="/img/hero1.webp" className="absolute animate-bounce top-50 left-100" width={200} height={200} alt="sequirity image" />
                   {/* <p className="overflow-hidden text-xl para-main text-muted md:text-2xl">
@@ -164,12 +169,11 @@ export default function HomePage() {
 
 
         {/* HOW WE DO Section */}
-        <section id="section-how" className="w-full flex pt-12 px-8 flex-col bg-gray-100">
+        {/* <section id="section-how" className="w-full flex pt-12 px-8 flex-col bg-gray-100">
           <div className="overflow-hidden "><h2 id="heading-how" className=' text-3xl md:text-4xl text-center font-bold mb-4 capitalize '>HOW WE DO</h2>
           </div>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-indigo-600 mx-auto rounded-full"></div>
-          {/* <p id="how-wedo-para" className=" overflow-hidden">At Merizimmedari, we ensure a safe, secure , and reliable process for managing and sharing your asset information with your loved ones. Here's how our platform works:</p> */}
-        </section>
+        </section> */}
 
 
 
