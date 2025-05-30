@@ -124,7 +124,7 @@ export default function ContactForm() {
                                         id="firstName"
                                         name="firstName"
                                         placeholder="Enter your first name"
-                                        className="h-10"
+                                        className="h-10 placeholder:opacity-50"
                                         required
                                     />
                                 </div>
@@ -132,7 +132,7 @@ export default function ContactForm() {
                                     <Label htmlFor="lastName" className="text-sm font-medium text-gray-700">
                                         Last Name *
                                     </Label>
-                                    <Input id="lastName" name="lastName" placeholder="Enter your last name" className="h-10" required />
+                                    <Input id="lastName" name="lastName" placeholder="Enter your last name" className="h-10 placeholder:opacity-50" required />
                                 </div>
                             </div>
 
@@ -146,7 +146,7 @@ export default function ContactForm() {
                                         name="email"
                                         type="email"
                                         placeholder="Enter your email address"
-                                        className="h-10"
+                                        className="h-10 placeholder:opacity-50"
                                         required
                                     />
                                 </div>
@@ -155,7 +155,7 @@ export default function ContactForm() {
                                     <Label htmlFor="phone" className="text-sm font-medium text-gray-700">
                                         Phone Number
                                     </Label>
-                                    <Input id="phone" name="phone" type="tel" placeholder="Enter your phone number" className="h-10" />
+                                    <Input id="phone" name="phone" type="tel" placeholder="Enter your phone number" className="h-10 placeholder:opacity-50" />
                                 </div>
                             </div>
 
@@ -165,7 +165,7 @@ export default function ContactForm() {
                                 <Label htmlFor="subject" className="text-sm font-medium text-gray-700">
                                     Subject *
                                 </Label>
-                                <Input id="subject" name="subject" placeholder="What can we help you with?" className="h-10" required />
+                                <Input id="subject" name="subject" placeholder="What can we help you with?" className="h-10 placeholder:opacity-50" required />
                             </div>
 
                             <div className="space-y-1">
@@ -176,7 +176,7 @@ export default function ContactForm() {
                                     id="message"
                                     name="message"
                                     placeholder="Tell us more about your needs..."
-                                    className="min-h-[80px] resize-none"
+                                    className="min-h-[80px] resize-none placeholder:opacity-50"
                                     required
                                 />
                             </div>
