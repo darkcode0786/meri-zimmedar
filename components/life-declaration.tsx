@@ -108,7 +108,7 @@ export default function LifeDeclaration({ identifier }: { identifier: string }) 
 
         <Button
           type="button"
-          className="w-full bg-blue-600 hover:bg-blue-700"
+          className="w-full bg-blue-500 hover:bg-blue-700"
           disabled={isSubmitting || !imageFile}
           onClick={onSubmit}
         >

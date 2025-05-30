@@ -113,7 +113,7 @@ export default function SignupComplete({ phone, prefillEmail = "" }: { phone: st
             )}
           />
 
-          <Button type="submit" className="w-full bg-blue-600 hover:bg-blue-700" disabled={isSubmitting}>
+          <Button type="submit" className="w-full bg-blue-500 hover:bg-blue-700" disabled={isSubmitting}>
             Let&apos;s Onboard
           </Button>
         </form>

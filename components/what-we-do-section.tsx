@@ -98,7 +98,7 @@ export default function WhatWeDoSection() {
     return (
         <section id="what-we-do"
             ref={sectionRef}
-            className="py-20 bg-white overflow-hidden"
+            className="py-10 md:py-20  bg-white overflow-hidden"
         >
 
             {/* Title */}
@@ -112,7 +112,7 @@ export default function WhatWeDoSection() {
             {/* Problem Statement */}
 
             <div className="container mx-auto px-4 max-w-6xl">
-                <div className="grid lg:grid-cols-2 gap-12 items-center">
+                <div className="grid lg:grid-cols-2 gap-5 md:gap-12 pb-10 items-center">
                     <div className="order-2 lg:order-1">
                         <div className="relative">
                             <div className="absolute -top-10 -left-10 w-24 h-24 animate-bounce bg-blue-100 rounded-full opacity-70" />
@@ -140,11 +140,11 @@ export default function WhatWeDoSection() {
                         </div>
                     </div>
 
-                    <div className="order-1 lg:order-2  py-25">
+                    <div className="order-1 lg:order-2  py-10 md:py-25">
                         <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-gray-900 mb-6">
                             <span className="relative">
                                 Securing Your Legacy
-                                {/* <span className="absolute -bottom-2 left-0 w-1/3 h-1 bg-blue-600"></span> */}
+                                {/* <span className="absolute -bottom-2 left-0 w-1/3 h-1 bg-blue-500"></span> */}
                             </span>
                             <span className="block text-blue-600 mt-2">For Those Who Matter Most</span>
                         </h2>
@@ -154,12 +154,10 @@ export default function WhatWeDoSection() {
                             bank accounts, fixed deposits, pension funds, real estate, and more.
                         </p>
 
-                        <Card className="border-l-4 border-l-red-500 mb-8">
+                        <Card className="border-4 border-red-500/50 bg-red-50/80  mb-8">
                             <CardContent className="p-6">
                                 <div className="flex items-start gap-4">
-                                    <div className="bg-red-50 p-2 rounded-full">
-                                        <AlertCircle className="w-6 h-6 text-red-500" />
-                                    </div>
+
                                     <div>
                                         <h3 className="font-semibold text-xl text-gray-900 mb-2">The Problem</h3>
                                         <p className="text-gray-700">
@@ -167,38 +165,43 @@ export default function WhatWeDoSection() {
                                             enough information when it's really required.
                                         </p>
                                     </div>
+
+                                    <div className=" rounded-full hidden md:block">
+                                        {/* <AlertCircle className="w-6 h-6 text-red-500" /> */}
+                                        <Image src="/img/problem.png" width={600} className="p-2" height={300} alt="The Problem " />
+                                    </div>
                                 </div>
                             </CardContent>
                         </Card>
 
-                        <div className="flex flex-col sm:flex-row gap-4 items-center space-x-2">
-                            <Link href={"#promise"} className="flex space-x-2 items-center  hover:underline" >
+                        <div className="flex flex-col sm:flex-row gap-4 items-start md:items-center space-x-2">
+                            <Link href={"#promise"} className="flex  space-x-2 border p-3 m-1 rounded-xl border-blue-500 items-center  hover:underline" >
                                 Secure Your Legacy
                                 <ArrowRight className="ml-2 h-4 w-4" />
                             </Link>
 
 
-                            <Link href={"#section-how"} className="flex space-x-2 items-center  hover:underline" ><FileCheck className="mr-2 h-4 w-4" /> How It Works</Link>
+                            <Link href={"#section-how"} className="flex border p-3 m-1 border-blue-500 rounded-xl space-x-2 items-center  hover:underline" ><FileCheck className="mr-2 h-4 w-4" /> How It Works</Link>
 
                         </div>
                     </div>
                 </div>
             </div>
-           
+
 
             {/* Solution */}
-            <div ref={solutionRef} className="mb-20 py-20 w-screen mx-auto  bg-gray-100">
+            <div ref={solutionRef} className=" md:mb-20 py-10 md:py-20  w-screen mx-auto  bg-gray-100">
                 <div className="max-w-6xl  mx-auto">
                     <div className="text-center mb-12">
                         <h3 className="text-3xl md:text-4xl font-semibold text-gray-900 mb-4">
-                            Merizmmedari Changes Everything
+                            Merizimmedari Changes Everything
                         </h3>
                         <p className=" text-gray-900">
                             Our intelligent platform revolutionizes how you secure your legacy
                         </p>
                     </div>
 
-                    <div className="grid md:grid-cols-2 gap-8 items-center">
+                    <div className="grid md:grid-cols-2 gap-8 items-center px-3">
                         <div className="space-y-6">
                             <div className="flex items-start space-x-4">
                                 <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -260,29 +263,40 @@ export default function WhatWeDoSection() {
 
 
             {/* Benefits */}
-            <div id="promise" ref={benefitsRef} className="text-center">
-                <div className="max-w-4xl mx-auto">
-                    <h3 className="text-3xl md:text-4xl font-semibold  text-gray-900 mb-8">The Merizmmedari Promise</h3>
-
-                    <div className="grid md:grid-cols-3 gap-6 mb-12">
-                        <div className="flex items-center justify-center space-x-3">
+            <div id="promise" ref={benefitsRef} className="pt-10 md:pt-0 text-center">
+                <div className="max-w-5xl mx-auto px-3 ">
+                    <h3 className="text-3xl md:text-4xl font-semibold  text-gray-900 mb-8">The Merizimmedari Promise</h3>
+                    <div className="grid md:grid-cols-3 gap-6 mb-12  ">
+                        <div className="flex items-center justify-start md:justify-center space-x-3">
                             <CheckCircle className="w-6 h-6 text-green-600 flex-shrink-0" />
                             <span className="text-lg text-gray-900">No Paperwork</span>
                         </div>
-                        <div className="flex items-center justify-center space-x-3">
+                        <div className="flex items-center justify-start md:justify-center space-x-3">
                             <CheckCircle className="w-6 h-6 text-green-600 flex-shrink-0" />
                             <span className="text-lg text-gray-900">No Confusion</span>
                         </div>
-                        <div className="flex items-center justify-center space-x-3">
+                        <div className="flex items-center justify-start md:justify-center space-x-3">
                             <CheckCircle className="w-6 h-6 text-green-600 flex-shrink-0" />
                             <span className="text-lg text-gray-900">Complete Peace of Mind</span>
                         </div>
                     </div>
+                    <Card className="bg-blue-500 rounded-2xl  text-white">
+                       
+                            <div className="flex flex-col md:flex-row items-center gap-2 px-3">
 
-                    <div className="bg-blue-500 rounded-2xl p-8 text-white">
-                        <h4 className="text-2xl md:text-3xl font-bold mb-4">Your Assets Will Reach the Right Hands</h4>
-                        <p className="text-xl text-blue-100">Securely, automatically, and exactly as you intended</p>
-                    </div>
+                                <div className="text-left  p-6 rounded-2xl">
+                                    <h4 className="text-xl md:text-3xl font-bold mb-4">Your Assets Will Reach the Right Hands</h4>
+                                    <p className="text-lg text-blue-100">Securely, automatically, and exactly as you intended</p>
+                                </div>
+
+                                <div className=" rounded-full">
+                                    {/* <AlertCircle className="w-6 h-6 text-red-500" /> */}
+                                    <Image src="/img/white-logo.png" width={400} className="p-6" height={300} alt="The Problem" />
+                                </div>
+                            </div>
+                 
+                    </Card>
+                 
                 </div>
             </div>
 

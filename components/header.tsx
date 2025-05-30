@@ -34,33 +34,33 @@ export function Header() {
             </SheetTrigger>
 
             <SheetContent side="right" className="w-72 bg-white">
-              <div className="flex items-center gap-2 w-40 overflow-hidden">
-                <Image src="/img/logo.png" alt="Modern apartment building" width={200} height={120} priority
+              <div className="flex items-center gap-2 w-50 overflow-hidden">
+                <Image src="/img/logo.png" alt="Modern apartment building" width={300} height={120} priority
                   className="object-cover pl-3 pt-3" />
               </div>
 
               
 
 
-              <div className="flex flex-col space-y-6 p-10">
-                <Link  href="#what-we-do" className="text-sm font-medium hover:text-primary">
+              <div className="flex flex-col space-y-6 p-5">
+                <Link  href="#what-we-do" className="text-lg font-medium hover:text-primary">
                   What We Do?
                 </Link>
-                <Link  href="#section-how" className="text-sm font-medium hover:text-primary">
+                <Link  href="#section-how" className="text-lg font-medium hover:text-primary">
                   How We Do?
                 </Link>
-                {/* <Link  href="#why-us" className="text-sm font-medium hover:text-primary">
+                {/* <Link  href="#why-us" className="text-lg font-medium hover:text-primary">
                   Why Choose Us
                 </Link> */}
-                <Link  href="#faq" className="text-sm font-medium hover:text-primary">
+                <Link  href="#faq" className="text-lg font-medium hover:text-primary">
                   FAQ
                 </Link>
-                <Link  href="#contact" className="text-sm font-medium hover:text-primary">
+                <Link  href="#contact" className="text-lg font-medium hover:text-primary">
                   Contact
                 </Link>
 
               </div>
-              <div className="p-6">
+              {/* <div className="p-6">
                 <h3 className="font-bold mb-4">Contact Us</h3>
                 <ul className="space-y-3">
                   <li className="flex items-start">
@@ -81,7 +81,7 @@ export function Header() {
                     <span className="text-sm text-muted-foreground">xyz@gmail.com</span>
                   </li>
                 </ul>
-              </div>
+              </div> */}
             </SheetContent>
           </Sheet>
         </div>

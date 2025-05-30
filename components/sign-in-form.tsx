@@ -585,12 +585,12 @@ export default function SignInForm() {
               {error && <div className="text-sm text-red-500 mt-2">{error}</div>}
 
               <div className="flex gap-4">
-                <Button type="submit" className="flex-1 bg-blue-600 hover:bg-blue-700" disabled={isSubmitting}>
+                <Button type="submit" className="flex-1 bg-blue-500 hover:bg-blue-700" disabled={isSubmitting}>
                   Login via OTP
                 </Button>
                 <Button
                   type="button"
-                  className="flex-1 bg-blue-600 hover:bg-blue-700"
+                  className="flex-1 bg-blue-500 hover:bg-blue-700"
                   onClick={(e) => handleLoginSubmit(e, "password")}
                   disabled={isSubmitting}
                 >
@@ -606,7 +606,7 @@ export default function SignInForm() {
 
               <Button
                 type="button"
-                className="w-full bg-blue-600 hover:bg-blue-700"
+                className="w-full bg-blue-500 hover:bg-blue-700"
                 onClick={(e) => handleLoginSubmit(e, "declaration")}
                 disabled={isSubmitting}
               >
@@ -702,7 +702,7 @@ export default function SignInForm() {
                 </button>
               </div>
 
-              <Button type="submit" className="w-full bg-blue-600 hover:bg-blue-700" disabled={isSubmitting}>
+              <Button type="submit" className="w-full bg-blue-500 hover:bg-blue-700" disabled={isSubmitting}>
                 Submit
               </Button>
             </form>
@@ -754,7 +754,7 @@ export default function SignInForm() {
 
               {error && <div className="text-sm text-red-500 mt-2">{error}</div>}
 
-              <Button type="submit" className="w-full bg-blue-600 hover:bg-blue-700" disabled={isSubmitting}>
+              <Button type="submit" className="w-full bg-blue-500 hover:bg-blue-700" disabled={isSubmitting}>
                 Submit
               </Button>
             </form>
@@ -791,7 +791,7 @@ export default function SignInForm() {
 
               {error && <div className="text-sm text-red-500 mt-2">{error}</div>}
 
-              <Button type="submit" className="w-full bg-blue-600 hover:bg-blue-700" disabled={isSubmitting}>
+              <Button type="submit" className="w-full bg-blue-500 hover:bg-blue-700" disabled={isSubmitting}>
                 Send OTP
               </Button>
             </form>
@@ -841,7 +841,7 @@ export default function SignInForm() {
                 </button>
               </div>
 
-              <Button type="submit" className="w-full bg-blue-600 hover:bg-blue-700" disabled={isSubmitting}>
+              <Button type="submit" className="w-full bg-blue-500 hover:bg-blue-700" disabled={isSubmitting}>
                 Submit
               </Button>
             </form>
@@ -911,7 +911,7 @@ export default function SignInForm() {
 
               {error && <div className="text-sm text-red-500 mt-2">{error}</div>}
 
-              <Button type="submit" className="w-full bg-blue-600 hover:bg-blue-700" disabled={isSubmitting}>
+              <Button type="submit" className="w-full bg-blue-500 hover:bg-blue-700" disabled={isSubmitting}>
                 Let&apos;s Onboard
               </Button>
             </form>
@@ -997,7 +997,7 @@ export default function SignInForm() {
 
               <Button
                 type="submit"
-                className="w-full bg-blue-600 hover:bg-blue-700"
+                className="w-full bg-blue-500 hover:bg-blue-700"
                 disabled={isSubmitting || !imageFile}
               >
                 Submit Declaration
@@ -1025,7 +1025,7 @@ export default function SignInForm() {
             <form onSubmit={handleForgotPassword} className="space-y-6">
               {error && <div className="text-sm text-red-500 mt-2 mb-4">{error}</div>}
 
-              <Button type="submit" className="w-full bg-blue-600 hover:bg-blue-700" disabled={isSubmitting}>
+              <Button type="submit" className="w-full bg-blue-500 hover:bg-blue-700" disabled={isSubmitting}>
                 Send Reset Link
               </Button>
             </form>
@@ -1043,7 +1043,7 @@ export default function SignInForm() {
             <h2 className="text-xl font-semibold">{successMessage}</h2>
             <Button
               type="button"
-              className="w-full bg-blue-600 hover:bg-blue-700"
+              className="w-full bg-blue-500 hover:bg-blue-700"
               onClick={() => setCurrentView("login")}
             >
               Back to Login

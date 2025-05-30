@@ -107,7 +107,7 @@ export default function SignupVerify({ phone, prefillEmail = "" }: { phone: stri
             </button>
           </div>
 
-          <Button type="submit" className="w-full bg-blue-600 hover:bg-blue-700" disabled={isSubmitting}>
+          <Button type="submit" className="w-full bg-blue-500 hover:bg-blue-700" disabled={isSubmitting}>
             Submit
           </Button>
         </form>

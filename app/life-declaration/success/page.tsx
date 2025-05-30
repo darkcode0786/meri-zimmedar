@@ -8,7 +8,7 @@ export default function LifeDeclarationSuccessPage() {
         <h1 className="text-2xl font-bold text-center mb-6">Declaration Submitted</h1>
         <p className="text-center text-gray-500 mb-6">Your life declaration has been successfully submitted.</p>
         <Link href="/" passHref>
-          <Button className="w-full bg-blue-600 hover:bg-blue-700">Return to Login</Button>
+          <Button className="w-full bg-blue-500 hover:bg-blue-700">Return to Login</Button>
         </Link>
       </div>
     </div>

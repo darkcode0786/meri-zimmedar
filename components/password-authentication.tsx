@@ -88,7 +88,7 @@ export default function PasswordAuthentication({ identifier }: { identifier: str
             )}
           />
 
-          <Button type="submit" className="w-full bg-blue-600 hover:bg-blue-700" disabled={isSubmitting}>
+          <Button type="submit" className="w-full bg-blue-500 hover:bg-blue-700" disabled={isSubmitting}>
             Submit
           </Button>
         </form>

@@ -96,7 +96,7 @@ export default function ManageAccount({ activeTab = "profile" }: { activeTab?: s
                 )}
               />
 
-              <Button type="submit" className="w-full bg-blue-600 hover:bg-blue-700" disabled={isSubmitting}>
+              <Button type="submit" className="w-full bg-blue-500 hover:bg-blue-700" disabled={isSubmitting}>
                 Reset Password
               </Button>
             </form>

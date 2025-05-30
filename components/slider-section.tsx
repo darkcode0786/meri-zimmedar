@@ -2,7 +2,7 @@
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
 import Image from 'next/image'
-import React, { useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 import splitType from 'split-type'
 import ScrollTrigger from 'gsap/dist/ScrollTrigger'
 
@@ -10,7 +10,7 @@ const SliderComponent = () => {
     const containerRef = useRef<HTMLDivElement>(null)
     const scrollSectionRef = useRef<HTMLDivElement>(null)
     const wrapperRef = useRef<HTMLDivElement>(null)
-
+ 
 
     const data = [
         {
@@ -39,12 +39,13 @@ const SliderComponent = () => {
         },
     ]
 
+
     useGSAP(() => {
         gsap.registerPlugin(ScrollTrigger)
         const scrollSection = scrollSectionRef.current
         const container = containerRef.current
         const wrapper = wrapperRef.current
-
+        // const checkForMobile: string = window.innerWidth <= 768 ? "top 25%" : "top 10%"
         if (!container || !wrapper || !scrollSection) return
 
         const horizontalScrollLength = wrapper.scrollWidth - container.offsetWidth
@@ -59,15 +60,16 @@ const SliderComponent = () => {
         // ✅ Horizontal scroll
         gsap.to(wrapper, {
             x: () => -horizontalScrollLength,
-            ease: 'none',
+            y: 0,
+            ease: "power4.out",
+
             scrollTrigger: {
                 trigger: container,
-                start: 'top 0%',
+                start: window.innerWidth <= 768 ? "top 25%" : "top 10%",
                 end: () => `+=${horizontalScrollLength}`,
                 pin: true,
-                pinSpacing: true,
-                scrub: 2,
-                // markers: true,
+                scrub: 1, anticipatePin: 1,
+                invalidateOnRefresh: true,
             },
         })
         gsap.registerPlugin(splitType)
@@ -116,27 +118,22 @@ const SliderComponent = () => {
 
     return (
         <>
-
-
-            <section ref={scrollSectionRef} className="relative w-full h-[340px] bg-gray-100 ">
-
-                <div ref={containerRef} className="absolute top-24 left-0 h-480px w-full overflow-hidden bg-gray-100 z-10">
-                    <div className='flex flex-col w-screen'>
-                        <div className="overflow-hidden "><h2 id="heading-how" className=' text-3xl md:text-4xl text-center font-bold mb-4 capitalize '>HOW WE DO</h2>
+            <section ref={scrollSectionRef} id='section-how' className={`relative w-full  md:max-h-[1160px] max-h-[1700px]   bg-gray-100`}>
+                <div ref={containerRef} className="absolute top-0 w-full max-h-screen  overflow-hidden  z-10">
+                    <div className='flex flex-col w-screen md:pt-20 pt-10 md:pb-10 items-center justify-center'>
+                        <div className="overflow-hidden ">
+                            <h2 id="heading-how" className='text-3xl md:text-4xl text-center font-bold  capitalize'>How We Do</h2>
                         </div>
-                        <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-indigo-600 mx-auto rounded-full"></div>
+                        <div className="w-24 h-1 my-6 bg-gradient-to-r from-blue-600 to-indigo-600 mx-auto rounded-full"></div>
                     </div>
-                    <div ref={wrapperRef} className="flex min-w-[140%] h-full">
-
+                    <div ref={wrapperRef} className="flex md:min-w-[140%] w-min-[400%]">
                         {data.map((item, index) => (
-                            <div key={index} className="w-1/4 p-4 flex items-center pb-10 pt-5 justify-center">
-                                <div id={`parent-${index}`} className={`${item["bg-color"]} h-67 w-full rounded-xl flex items-center justify-center   relative`}>
-                                    <div className="w-full  p-6 ">
-                                        <h3 id={`cardsHead-${index}`} className="overflow-hidden  text-3xl mb-6 text-white">
-                                            {item.title}
-                                        </h3>
-                                        <p className="text-sm text-white pr-25">{item.para}</p>
-                                        <div className="w-[10vw] absolute top-[8rem] left-[19rem] z-10">
+                            <div key={index} className="w-full md:w-1/4 p-6 pb-10  md:pb-15  flex items-center  justify-center">
+                                <div id={`parent-${index}`} className={`${item["bg-color"]} h-72 md:w-full w-screen rounded-xl flex items-start justify-center relative`}>
+                                    <div className="w-full p-6  flex flex-col items-start justify-center relative z-20">
+                                        <h3 id={`cardsHead-${index}`} className="overflow-hidden  text-2xl md:text-3xl mb-6 text-white">{item.title}</h3>
+                                        <p className="text-sm text-white pr-15 ">{item.para}</p>
+                                        <div className=" w-42 md:w-[12vw] absolute top-50 left-58  md:top-[10rem] md:left-[19rem] z-10">
                                             <Image id={`png-upload-${index}`} src={`/img/${item["image-png"]}`} className='w-full' width={250} height={250} alt="upload png" />
                                         </div>
                                     </div>
@@ -146,6 +143,7 @@ const SliderComponent = () => {
                     </div>
                 </div>
             </section>
+
         </>
     )
 }

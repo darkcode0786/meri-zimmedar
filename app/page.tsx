@@ -20,7 +20,8 @@ import WhatWeDoSection from "@/components/what-we-do-section"
 import Image from "next/image"
 import { TextPlugin } from "gsap/TextPlugin";
 import TypewriterEffect from "@/components/typewriter-effect"
- 
+import ContactForm from "@/components/contact-form"
+
 
 
 
@@ -109,35 +110,35 @@ export default function HomePage() {
       <Header />
       <main className="flex-1 "   >
         {/* Hero Section */}
-        <section className=" relative md:h-[580px] w-full overflow-hidden py-8 md:py-12 ">
+        <section className=" relative md:h-[580px] w-full  py-8 md:py-12 ">
           <div
             className="absolute inset-0 bg-cover bg-center z-0"
             style={{ backgroundImage: "url('/img/hero-banner.jpg')" }}
           ></div>
           <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-black/30 z-[1]"></div>
           <div className="container py-10 relative z-10 flex  ">
-            <div className="flex justify-between w-full items-center ">
-              <div className="flex flex-col space-y-6 w-full" >
+            <div className=" justify-between p-2  grid md:grid-cols-2 mx-auto gap-10 md:gap-30 items-center ">
+              <div className="flex flex-col space-y-6 w-full " >
                 <div className="space-y-4 relative w-full">
                   {/* <h1 className="text-6xl font-bold text-white">Meri Zimmedari</h1> */}
-              
+
                   <h1 className="overflow-hidden  text-main text-4xl font-bold text-white  sm:text-5xl md:text-4xl">
-                    Are you sure your? <br/>
-                      <TypewriterEffect
-                text="Nominee can claim "
-                speed={80}
-                delayBeforeReverse={1000}
-              />
-                  <br/> all your assets. when the time comes?
+                    Are you sure your? <br />
+                    <TypewriterEffect
+                      text="Nominee can claim "
+                      speed={80}
+                      delayBeforeReverse={1000}
+                    />
+                    <br /> all your <span className="text-blue-500">assets</span>. when the time comes?
                   </h1>
-                  <Image id="hero-png" src="/img/hero1.webp" className="absolute animate-bounce top-50 left-100" width={200} height={200} alt="sequirity image" />
+                  <Image id="hero-png" src="/img/hero2.webp" className="absolute animate-bounce z-20 top-49 w-34 md:w-42 left-50  md:top-30 md:left-100 " width={200} height={200} alt="sequirity image" />
                   {/* <p className="overflow-hidden text-xl para-main text-muted md:text-2xl">
                       A smart way to safeguard your financial assets and nominee information.
                     </p> */}
                 </div>
 
 
-                <div className="flex items-center space-x-4 text-sm text-muted">
+                <div className="flex   flex-col md:flex-row space-y-2 md:space-x-4  bg-transparent backdrop-blur-2xl md:backdrop-blur-none  rounded-2xl md:rounded-none p-5  text-sm text-muted">
                   <div className="flex items-center">
                     <CheckCircle className="mr-1 h-4 w-4" />
                     <span>Secure & Encrypted</span>
@@ -179,11 +180,15 @@ export default function HomePage() {
 
         <SliderComponent />
 
+
+
+
+
         {/* FAQ Section */}
-        <section id="faq" className=" py-20 bg-background">
+        <section id="faq" className=" py-10 md:py-20  bg-background px-3 md:px-0">
           <div className="container md:px-52">
 
-            <div className="grid lg:grid-cols-2 border-6 border-gray-100 p-10 rounded-2xl shadow-2xl">
+            <div className="grid lg:grid-cols-2 border-6 border-gray-100 p-6   rounded-2xl shadow-2xl">
 
 
               <div className="text-center mb-16 md:p-10 overflow-hidden">
@@ -254,6 +259,10 @@ export default function HomePage() {
 
           </div>
         </section>
+
+        <ContactForm />
+
+
 
         <Footer />
       </main>
