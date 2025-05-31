@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Shield, Facebook, Twitter, Instagram, Linkedin } from "lucide-react"
+import { Shield, Facebook, Twitter, Instagram, Linkedin, Phone, Mail } from "lucide-react"
 import Image from "next/image"
 
 export function Footer() {
@@ -65,14 +65,14 @@ export function Footer() {
               </li>
               <li>
                 <Link href="#contact" className="text-white hover:text-black transition-colors">
-                  Contact
+                  Contact Us
                 </Link>
               </li>
             </ul>
           </div>
 
           <div>
-            <h3 className="font-bold text-lg mb-4 text-white">Legal</h3>
+            <h3 className="font-bold text-lg mb-4 text-white">Legal & Help</h3>
             <ul className="space-y-2">
               <li>
                 <Link href="#"  className="text-white hover:text-black transition-colors">
@@ -85,6 +85,11 @@ export function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="#"   className="text-white hover:text-black transition-colors">
+                  Help Center
+                </Link>
+              </li>
+              <li>
                 <Link href="#"  className="text-white hover:text-black transition-colors">
                   Cookie Policy
                 </Link>
@@ -92,7 +97,7 @@ export function Footer() {
             </ul>
           </div>
 
-          <div>
+          {/* <div>
             <h3 className="font-bold text-lg mb-4 text-white">Support</h3>
             <ul className="space-y-2">
               <li>
@@ -111,6 +116,20 @@ export function Footer() {
                 </Link>
               </li>
             </ul>
+          </div> */}
+          <div className="space-y-4">
+            <h3 className="font-bold text-lg mb-4 text-white">Office</h3>
+            <p className=" text-sm mb-4 text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, modi.</p>
+           
+            <div className="space-x-2  text-white flex ">
+              <Phone className="text-white" />
+              <span>+919987600000</span>
+            </div>
+            <div className="space-x-2  text-white flex">
+              <Mail />
+              <span>info@merizimmedari.com</span>
+            </div>
+           
           </div>
         </div>
 

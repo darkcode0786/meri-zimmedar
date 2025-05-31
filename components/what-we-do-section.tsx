@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
-import { Shield, Users, Eye, CheckCircle, ArrowRight, Lock, Heart, FileText, FileCheck, AlertCircle } from "lucide-react"
+import { Shield, Users, Eye, CheckCircle, ArrowRight, Lock, Heart, FileText, FileCheck, AlertCircle, LockKeyhole } from "lucide-react"
 import Image from "next/image"
 
 import { Card, CardContent } from "./ui/card"
@@ -103,7 +103,7 @@ export default function WhatWeDoSection() {
 
             {/* Title */}
             <div className="text-center  overflow-hidden">
-                <h2 ref={titleRef} className="text-5xl md:text-4xl font-bold text-black ">
+                <h2 ref={titleRef} className="text-4xl md:text-4xl font-bold text-black ">
                     What We Do
                 </h2>
             </div>
@@ -128,7 +128,7 @@ export default function WhatWeDoSection() {
                                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900/70 to-transparent flex flex-col justify-end p-6">
                                     <div className="flex items-center gap-2 text-white mb-2">
                                         <AlertCircle className="w-6 h-6 text-white" />
-                                        <span className="text-sm font-medium">Problem faced by 10,000+ families</span>
+                                        <span className="text-sm font-medium">Problem faced by multiples families</span>
                                     </div>
                                 </div>
 
@@ -166,10 +166,9 @@ export default function WhatWeDoSection() {
                                         </p>
                                     </div>
 
-                                    <div className=" rounded-full hidden md:block">
-                                        {/* <AlertCircle className="w-6 h-6 text-red-500" /> */}
+                                    {/* <div className=" rounded-full hidden md:block">
                                         <Image src="/img/problem.png" width={600} className="p-2" height={300} alt="The Problem " />
-                                    </div>
+                                    </div> */}
                                 </div>
                             </CardContent>
                         </Card>
@@ -243,7 +242,7 @@ export default function WhatWeDoSection() {
                         <div className="bg-blue-500 rounded-2xl p-8 text-white">
                             <div className="text-center">
                                 <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                                    <Heart className="w-10 h-10 text-white" />
+                                    <LockKeyhole className="w-10 h-10 text-white" />
                                 </div>
                                 <h4 className="text-2xl font-bold mb-4">Complete Confidentiality</h4>
                                 <p className="text-blue-100 mb-6">

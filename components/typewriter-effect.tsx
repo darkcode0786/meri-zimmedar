@@ -52,7 +52,7 @@ export default function TypewriterEffect({ text, speed = 100, delayBeforeReverse
   return (
     <span className="inline-block">
       {displayText}
-      <span className="animate-blink">|</span>
+      <span className="animate-blink text-blue-500 animate-pulse">|</span>
     </span>
   )
 }

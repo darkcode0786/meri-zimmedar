@@ -1,23 +1,26 @@
 @import "tailwindcss";
 @import "tw-animate-css";
- html,body {
+
+html,
+body {
   height: 100%;
   width: 100%;
   /* overflow: auto; */
 
 }
+
 @font-face {
-    font-family: 'Graphik';
-    src: url('/fonts/Graphik-Regular.woff2') format('woff2');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
+  font-family: 'Graphik';
+  src: url('/fonts/Graphik-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
 
 /* globals.css */
- 
+
 body {
- font-family: 'Graphik', sans-serif;
+  font-family: 'Graphik', sans-serif;
   letter-spacing: 1px;
 }
 
@@ -154,18 +157,18 @@ h4 {
 
 
 
- 
- 
+
+
 
 
 
 @media only screen and (min-width: 1025px) {
-.container {
-  margin: 0 auto;
-  padding: 0px 8px;
-  width: 100%;
-  height: 100%;
-}
+  .container {
+    margin: 0 auto;
+    padding: 0px 8px;
+    width: 100%;
+    height: 100%;
+  }
 
 }
 
@@ -197,6 +200,14 @@ h4 {
   font-size: 38px;
   border-radius: 16px;
   color: rgb(41, 41, 41);
-  font-weight: bold; /* fixed: use font-weight instead of font-style */
+  font-weight: bold;
+  /* fixed: use font-weight instead of font-style */
   text-align: center;
 }
+
+/* .slider-div:hover h3 {
+  color: white;
+}
+.slider-div:hover p {
+  color: rgb(241, 241, 241);
+} */

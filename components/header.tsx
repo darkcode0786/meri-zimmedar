@@ -56,7 +56,7 @@ export function Header() {
                   FAQ
                 </Link>
                 <Link  href="#contact" className="text-lg font-medium hover:text-primary">
-                  Contact
+                  Contact Us
                 </Link>
 
               </div>
@@ -101,7 +101,7 @@ export function Header() {
             FAQ
           </Link>
           <Link  href="#contact" className="hover-item text-lg font-medium transition-colors hover:text-primary">
-            Contact
+            Contact Us
           </Link>
         </nav>
 

@@ -117,19 +117,19 @@ export default function HomePage() {
           ></div>
           <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-black/30 z-[1]"></div>
           <div className="container py-10 relative z-10 flex  ">
-            <div className=" justify-between p-2  grid md:grid-cols-2 mx-auto gap-10 md:gap-30 items-center ">
-              <div className="flex flex-col space-y-6 w-full " >
-                <div className="space-y-4 relative w-full">
+            <div className=" justify-between p-2 gap-4  flex flex-col md:flex-row mx-auto w-full items-center ">
+              <div className="flex flex-col space-y-6  w-full  md:min-w-1/2" >
+                <div className="space-y-4 relative min:min-h-full">
                   {/* <h1 className="text-6xl font-bold text-white">Meri Zimmedari</h1> */}
 
-                  <h1 className="overflow-hidden  text-main text-4xl font-bold text-white  sm:text-5xl md:text-4xl">
-                    Are you sure your? <br />
+                  <h1 className="overflow-hidden text-main text-4xl font-bold text-white min-w-full h-42  sm:text-5xl md:text-4xl">
+                    {/* Are you sure your <br /> */}
                     <TypewriterEffect
-                      text="Nominee can claim "
+                      text="Are you sure your nominee can claim all your assets when the time comes?"
                       speed={80}
-                      delayBeforeReverse={1000}
+                      delayBeforeReverse={700}
                     />
-                    <br /> all your <span className="text-blue-500">assets</span>. when the time comes?
+                    {/* <br /> all your <span className="text-blue-500">assets</span>. when the time comes? */}
                   </h1>
                   <Image id="hero-png" src="/img/hero2.webp" className="absolute animate-bounce z-20 top-49 w-34 md:w-42 left-50  md:top-30 md:left-100 " width={200} height={200} alt="sequirity image" />
                   {/* <p className="overflow-hidden text-xl para-main text-muted md:text-2xl">
@@ -138,7 +138,7 @@ export default function HomePage() {
                 </div>
 
 
-                <div className="flex   flex-col md:flex-row space-y-2 md:space-x-4  bg-transparent backdrop-blur-2xl md:backdrop-blur-none  rounded-2xl md:rounded-none p-5  text-sm text-muted">
+                <div className="flex flex-col md:flex-row space-y-2 md:space-x-4  bg-transparent backdrop-blur-2xl md:backdrop-blur-none  rounded-2xl md:rounded-none p-5  text-sm text-muted">
                   <div className="flex items-center">
                     <CheckCircle className="mr-1 h-4 w-4" />
                     <span>Secure & Encrypted</span>
@@ -157,8 +157,10 @@ export default function HomePage() {
               </div>
 
               {/* Login/Signup Card */}
+              <div className="min-w-1/2">
+                <SignInForm />
 
-              <SignInForm />
+              </div>
 
             </div>
           </div>

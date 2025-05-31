@@ -80,7 +80,7 @@ export default function ContactForm() {
                                             />
                                         </svg>
                                     </div>
-                                    <span className="text-sm">contact@meritzimmedari.com</span>
+                                    <span className="text-sm">contact@merizimmedari.com</span>
                                 </div>
                                 <div className="flex items-center">
                                     <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center mr-3">
