@@ -537,18 +537,18 @@ export default function SignInForm() {
       case "login":
         return (
           <>
-               <div className="text-center mb-6 bg-transparent backdrop-blur-2xl">
-              <div className="font-bold text-xl py-2 px-4  inline-block mb-6">Login User</div>
+            <div className="text-center mb-6 bg-transparent backdrop-blur-2xl ">
+              <div className="w-full flex justify-center items-center mb-6"><p className=" text-lg py-1 px-4 border border-blue-500 rounded-full text-blue-500  inline-block ">Let's Go...!!!</p></div>
 
               <div className="flex items-center justify-center gap-3 mb-4">
-               <Separator className="flex-1" />
+                <Separator className="flex-1" />
                 <button
                   type="button"
                   className="flex items-center justify-center w-10 h-10"
                   onClick={() => handleSocialLogin("google")}
                   disabled={isSubmitting}
                 >
-                  
+
                   <Image src="/google-icon.svg" alt="Google" width={40} height={40} />
                 </button>
 
@@ -564,7 +564,7 @@ export default function SignInForm() {
                   <Image src="/facebook-icon.svg" alt="Facebook" width={40} height={40} />
 
                 </button>
-                  <Separator className="flex-1" />
+                <Separator className="flex-1" />
               </div>
             </div>
 
@@ -646,7 +646,9 @@ export default function SignInForm() {
       case "otp-verification":
         return (
           <>
-            <div className="mb-6">
+            <div className="mb-6 ">
+          
+
               <button
                 type="button"
                 onClick={() => setCurrentView("login")}
@@ -655,7 +657,7 @@ export default function SignInForm() {
                 <ArrowLeft className="h-4 w-4 mr-1" />
                 Back to Login
               </button>
-              <h2 className="text-xl font-semibold text-center mb-2">Authentication</h2>
+                  <div className="w-full flex justify-center items-center mb-6"><p className=" text-lg py-1 px-4 border border-blue-500 rounded-full text-blue-500  inline-block ">Almost there</p></div>
               <p className="text-center text-gray-500 mb-4">Enter OTP shared on {identifier}</p>
             </div>
 
@@ -692,9 +694,8 @@ export default function SignInForm() {
               <div className="flex justify-between items-center">
                 <button
                   type="button"
-                  className={`text-blue-600 text-sm ${
-                    resendDisabled ? "opacity-50 cursor-not-allowed" : "hover:underline"
-                  }`}
+                  className={`text-blue-600 text-sm ${resendDisabled ? "opacity-50 cursor-not-allowed" : "hover:underline"
+                    }`}
                   onClick={handleResendOTP}
                   disabled={resendDisabled}
                 >
@@ -721,7 +722,10 @@ export default function SignInForm() {
                 <ArrowLeft className="h-4 w-4 mr-1" />
                 Back to Login
               </button>
-              <h2 className="text-xl font-semibold text-center mb-6">Authentication</h2>
+                    <div className="w-full flex justify-center items-center mb-6"><p className=" text-lg py-1 px-4 border border-blue-500 rounded-full text-blue-500  inline-block ">Almost there</p></div>
+
+              
+
             </div>
 
             <form onSubmit={handlePasswordSubmit} className="space-y-6">
@@ -831,9 +835,8 @@ export default function SignInForm() {
               <div className="flex justify-between items-center">
                 <button
                   type="button"
-                  className={`text-blue-600 text-sm ${
-                    resendDisabled ? "opacity-50 cursor-not-allowed" : "hover:underline"
-                  }`}
+                  className={`text-blue-600 text-sm ${resendDisabled ? "opacity-50 cursor-not-allowed" : "hover:underline"
+                    }`}
                   onClick={handleResendOTP}
                   disabled={resendDisabled}
                 >
@@ -1056,5 +1059,5 @@ export default function SignInForm() {
     }
   }
 
-  return <div className="w-full max-w-md mx-auto border rounded-lg p-6 bg-white shadow-sm">{renderView()}</div>
+  return <div className="w-full max-w-md mx-auto border  rounded-lg p-6 bg-white shadow-sm">{renderView()}</div>
 }

@@ -1,10 +1,12 @@
 import Link from "next/link"
 import { Shield, Facebook, Twitter, Instagram, Linkedin, Phone, Mail } from "lucide-react"
 import Image from "next/image"
+import BackToTop from "./backtoTop"
 
 export function Footer() {
   return (
     <footer  className="bg-white ">
+      <BackToTop />
       <div className="w-full h-full bg-blue-500 rounded-t-2xl p-10">
         <div className="container">
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4 mb-8">

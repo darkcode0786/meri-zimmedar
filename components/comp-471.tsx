@@ -65,7 +65,7 @@ const programmingLanguages = [
   },
 ]
 
-export default function Component() {
+export default function Table1() {
   return (
     <div>
       <div className="bg-background overflow-hidden rounded-md border">

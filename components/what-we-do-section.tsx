@@ -98,7 +98,7 @@ export default function WhatWeDoSection() {
     return (
         <section id="what-we-do"
             ref={sectionRef}
-            className="py-10 md:py-20  bg-white overflow-hidden"
+            className="py-10 md:py-20 section  bg-white overflow-hidden"
         >
 
             {/* Title */}
@@ -165,10 +165,6 @@ export default function WhatWeDoSection() {
                                             enough information when it's really required.
                                         </p>
                                     </div>
-
-                                    {/* <div className=" rounded-full hidden md:block">
-                                        <Image src="/img/problem.png" width={600} className="p-2" height={300} alt="The Problem " />
-                                    </div> */}
                                 </div>
                             </CardContent>
                         </Card>
@@ -189,7 +185,7 @@ export default function WhatWeDoSection() {
 
 
             {/* Solution */}
-            <div ref={solutionRef} className=" md:mb-20 py-10 md:py-20  w-screen mx-auto  bg-gray-100">
+            <div ref={solutionRef} className="  py-10 md:py-20  w-screen mx-auto  bg-gray-100">
                 <div className="max-w-6xl  mx-auto">
                     <div className="text-center mb-12">
                         <h3 className="text-3xl md:text-4xl font-semibold text-gray-900 mb-4">
@@ -262,7 +258,7 @@ export default function WhatWeDoSection() {
 
 
             {/* Benefits */}
-            <div id="promise" ref={benefitsRef} className="pt-10 md:pt-0 text-center">
+            <div id="promise" ref={benefitsRef} className="pt-10 md:pt-20 text-center">
                 <div className="max-w-5xl mx-auto px-3 ">
                     <h3 className="text-3xl md:text-4xl font-semibold  text-gray-900 mb-8">The Merizimmedari Promise</h3>
                     <div className="grid md:grid-cols-3 gap-6 mb-12  ">

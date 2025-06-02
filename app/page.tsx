@@ -7,6 +7,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import {
 
   CheckCircle,
+  MessageCircleQuestion,
 
 } from "lucide-react"
 import { useRef, useEffect } from "react"
@@ -21,6 +22,7 @@ import Image from "next/image"
 import { TextPlugin } from "gsap/TextPlugin";
 import TypewriterEffect from "@/components/typewriter-effect"
 import ContactForm from "@/components/contact-form"
+import Link from "next/link"
 
 
 
@@ -101,6 +103,27 @@ export default function HomePage() {
     })
 
 
+
+    // ancor links
+    document.querySelectorAll('.section').forEach(section => {
+      const id = section.getAttribute('id');
+      // Find the Link <a> by its href
+      const anchor = document.querySelector(`a[href="#${id}"]`);
+
+      if (anchor) {
+        ScrollTrigger.create({
+          trigger: section,
+          start: 'top center',
+          end: 'bottom center',
+          toggleClass: { targets: anchor, className: 'active-anchor' },
+        });
+      }
+    });
+
+    return () => ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+
+
+
   })
 
 
@@ -110,7 +133,7 @@ export default function HomePage() {
       <Header />
       <main className="flex-1 "   >
         {/* Hero Section */}
-        <section className=" relative md:h-[580px] w-full  py-8 md:py-12 ">
+        <section className="section relative md:h-[580px] w-full  py-8 md:py-12 ">
           <div
             className="absolute inset-0 bg-cover bg-center z-0"
             style={{ backgroundImage: "url('/img/hero-banner.jpg')" }}
@@ -132,13 +155,11 @@ export default function HomePage() {
                     {/* <br /> all your <span className="text-blue-500">assets</span>. when the time comes? */}
                   </h1>
                   <Image id="hero-png" src="/img/hero2.webp" className="absolute animate-bounce z-20 top-49 w-34 md:w-42 left-50  md:top-30 md:left-100 " width={200} height={200} alt="sequirity image" />
-                  {/* <p className="overflow-hidden text-xl para-main text-muted md:text-2xl">
-                      A smart way to safeguard your financial assets and nominee information.
-                    </p> */}
+
                 </div>
 
 
-                <div className="flex flex-col md:flex-row space-y-2 md:space-x-4  bg-transparent backdrop-blur-2xl md:backdrop-blur-none  rounded-2xl md:rounded-none p-5  text-sm text-muted">
+                <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4  bg-transparent backdrop-blur-2xl md:backdrop-blur-none  rounded-2xl md:rounded-none p-5  text-sm text-muted">
                   <div className="flex items-center">
                     <CheckCircle className="mr-1 h-4 w-4" />
                     <span>Secure & Encrypted</span>
@@ -171,14 +192,6 @@ export default function HomePage() {
         <WhatWeDoSection />
 
 
-        {/* HOW WE DO Section */}
-        {/* <section id="section-how" className="w-full flex pt-12 px-8 flex-col bg-gray-100">
-          <div className="overflow-hidden "><h2 id="heading-how" className=' text-3xl md:text-4xl text-center font-bold mb-4 capitalize '>HOW WE DO</h2>
-          </div>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-indigo-600 mx-auto rounded-full"></div>
-        </section> */}
-
-
 
         <SliderComponent />
 
@@ -187,7 +200,7 @@ export default function HomePage() {
 
 
         {/* FAQ Section */}
-        <section id="faq" className=" py-10 md:py-20  bg-background px-3 md:px-0">
+        <section id="faq" className="section py-10 md:py-20  bg-background px-3 md:px-0">
           <div className="container md:px-52">
 
             <div className="grid lg:grid-cols-2 border-6 border-gray-100 p-6   rounded-2xl shadow-2xl">
@@ -200,6 +213,13 @@ export default function HomePage() {
                 <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-indigo-600 my-6 rounded-full"></div>
 
                 <p className="mt-4 text-2xl text-muted-foreground text-left">Find answers to common questions about our platform</p>
+                {/* <Link href="#" className="hover:underline  p-2 my-4">more faq's</Link> */}
+                <Link href={"/"} className="flex my-3 space-x-2 w-fit border p-3 m-1 rounded-xl border-blue-500 items-center  hover:underline" >
+                  More Faq's
+                   
+                  <MessageCircleQuestion className="ml-2 h-4 w-4" />
+                </Link>
+
               </div>
 
               <div className="max-w3xl ">
@@ -256,9 +276,9 @@ export default function HomePage() {
                     </AccordionContent>
                   </AccordionItem>
                 </Accordion>
+
               </div>
             </div>
-
           </div>
         </section>
 
